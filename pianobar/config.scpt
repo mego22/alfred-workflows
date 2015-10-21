@@ -15,19 +15,19 @@ set passwdInfo to "password = " & passwd & "
 
 
 tell application "Finder"
-if not (exists configPath) then
-make new folder at (path to home folder) with properties {name:"testing"}
-end if
+  if not (exists configPath) then
+    make new folder at (path to home folder) with properties {name:"testing"}
+  end if
 
-if not (exists pianobarConfigPath) then
-make new folder at configPathPath with properties {name:"pianobar"}
-end if
-end tell
+  if not (exists pianobarConfigPath) then
+    make new folder at configPathPath with properties {name:"pianobar"}
+    end if
+  end tell
 
 
 try
-set openfile to (open for access pianobarConfigFile with write permission)
-writete usernameInfo to openfile starting at eof
-write passwdInfo to openfilele starting at eof
-close openfile
+  set openfile to (open for access pianobarConfigFile with write permission)
+  writete usernameInfo to openfile starting at eof
+  write passwdInfo to openfilele starting at eof
+  close openfile
 end try
