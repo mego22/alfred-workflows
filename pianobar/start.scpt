@@ -1,10 +1,12 @@
-set pianobarCTLFile to (path to home folder as text) & ".config:pianobar:ctl" as string
+set pianobarCTLFile to (path to home folder as text) & ".config:pianobar:ctl"
 
--- tell application "Finder"
---  if not (exists pianobarCTLFile) then
---    do shell script "mkfifo " & POSIX path of pianobarCTLFile
---  end if
--- end tell
+tell application "System Events"
+  if not (exists file pianobarCTLFile) then
+    tell application "Finder"
+      do shell script "mkfifo " & POSIX path of pianobarCTLFile
+    end tell
+  end if
+end tell
 
 tell application "iTerm"
   activate
