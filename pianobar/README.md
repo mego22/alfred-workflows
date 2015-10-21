@@ -1,5 +1,1 @@
-# alfred-workflows
-[Alfred2](https://www.alfredapp.com/) workflows.
-[Powerpack](https://www.alfredapp.com/powerpack/) is required.
-
-
+Alfred workflow to control [pianobar](http://6xq.net/pianobar/)
